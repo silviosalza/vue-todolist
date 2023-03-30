@@ -7,7 +7,6 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 </head>
 <body>
@@ -25,7 +24,7 @@
                 </div>
                 <ul class="todo-list" v-if="todos.length > 0">
                     <li class="d-flex justify-content-between" v-for="(todo, index) in todos">
-                      <p>{{todo.text}}</p>
+                      <p :class = "{ line: todos[index].done }">{{todo.text}}</p>
                       <span class="delete" @click="removeTodo(index)">&cross;</span>
                     </li>
                     
@@ -33,6 +32,7 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

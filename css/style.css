@@ -23,6 +23,6 @@ ul li{
     border-bottom: 5px solid black;
     padding: 1rem 0;
 }
-.done{
+.line{
     text-decoration: line-through;
 }

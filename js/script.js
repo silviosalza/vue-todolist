@@ -55,8 +55,7 @@ createApp({
             }
         },
         removeTodo(indexToRemove) {
-            
-            console.log(this.todos[indexToRemove].text);
+            this.todos[indexToRemove].done = true 
         }
       }
     }).mount("#app");
