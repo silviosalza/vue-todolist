@@ -51,8 +51,6 @@ createApp({
                     done: false
                 }
 
-            } else {
-                
             }
         },
         removeTodo(indexToRemove) {
