@@ -42,8 +42,9 @@ createApp({
 
     methods: {
         addTodo() {
-            if(this.newTodo.text !== "") {
-                
+            
+            if(this.newTodo.text.length > 0) {
+                this.newTodo.text = this.newTodo.text[0].toUpperCase() + this.newTodo.text.substring(1);
                 this.todos.unshift(this.newTodo);
                 this.newTodo = {
                     text : "",
